@@ -1,0 +1,213 @@
+
+*{
+ margin: 0; 
+ padding: 0;
+ border: 0;   
+}
+header{
+    height: 200px;/*Le da al header un tamaño de 200 pixeles.*/
+    color: black;
+}
+
+.logo{
+    position: absolute;
+    transform: translate(-2px,-420px); /*Traslada al logo -2 pixeles para la izquierda y -420 pixeles hacia arriba.*/
+}
+
+.numero {
+    font-size: 2em; 
+    color: rgb(255, 255, 255); /*Color de la palabra*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/*Tipografia de la letra.*/
+    float: right;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+}
+
+
+.article h4 {
+    color: black;
+    background-color: #ffffff;
+}
+
+.Imagen img {
+    height: 15%;
+    width: 15%;
+    position: relative;
+    transform: translate(-10px,-50px);
+}
+
+.imgfondo img{
+    background-position: center;
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    filter:blur(4px);
+    margin: 0;
+    display: flex;
+    position: relative;
+    border: 0;
+    padding: 0;
+    bottom: 20px;
+    z-index: -50;
+
+}
+
+.nombre article h1 { 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #EEEAE1; 
+    font-size: 6em; 
+    text-align: center;
+    position: center;
+    transform: translate(0px,-230px); 
+
+}
+
+.nombre article h5 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    color: #EEEAE1; 
+    font-size: 3em; 
+    text-align: center;
+    position: center;
+    transform: translate(0px,-230px); 
+}
+
+body{
+    font-family: arial, sans-serif;
+    background-color:#71967C;
+    margin: 0;
+    text-align: center;
+}
+
+.galeria {
+   display: grid;
+   gap: 0px;
+   padding: 5px;
+   margin-top: 50px;
+   justify-items: center;
+   grid-template-columns: repeat(3, 1fr);
+   row-gap: 40px;
+}
+
+.producto {
+width: 200px;
+text-align: center;
+padding-top: 50px;
+}
+
+.producto img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.producto h4{
+    font-size: 1.1em;
+    margin: 10px, 5px;
+}
+
+.producto p{
+    font-size: 1em;
+    color: #000000;
+
+    box-shadow: 0 1px 8px rgba(169, 60, 60, 0.1);
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+    border-radius: 10px;
+    padding: 10px;
+}
+.producto:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgb(13, 55, 19);
+    background-color: f5f5dc;
+}
+
+
+.btncomprar{
+    background-color: rgb(42, 67, 18);
+    color: #EEEAE1;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.producto p{
+    background-color: #cce8c7;
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.publicidad img {
+    width: 50%;
+    position: left;
+    height: auto;
+    top: 4em;
+}
+
+.menu{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px, 0px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 100px;
+    justify-content: center;
+
+}
+.menu ul li{
+    display: inline-block;
+    margin: 0px, 40px;
+}
+.menu ul li a{
+color: rgb(255, 255, 255);
+text-decoration: none;
+font-weight: bold;
+font-size: 18px;
+padding: 10px, 15px;
+}
+
+.customfooter{
+background-color: #3F5748;
+padding: 40px 0;
+text-align: center;
+}
+
+.redes{
+    display:inline-block;
+    border:none;
+    background: none;
+    cursor:pointer;
+    margin: 0 15px;
+}
+.redes img{
+width: 50px;
+height: 50px;
+transition: tranform 0,2s ease;
+}
+.redes img:hover{
+    transform:scale(1,1);
+}
+
+.footertexto{
+font-size: 30px;
+color: #000000;
+margin: 0;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-top: -15px;
+position: relative;
+}
+
