@@ -4,74 +4,139 @@
  padding: 0;
  border: 0;   
 }
-header{
-    height: 200px;/*Le da al header un tamaño de 200 pixeles.*/
-    color: black;
+
+html, body{
+    height: 100%;
 }
 
-.logo{
-    position: absolute;
-    transform: translate(-2px,-420px); /*Traslada al logo -2 pixeles para la izquierda y -420 pixeles hacia arriba.*/
-}
-
-.numero {
-    font-size: 2em; 
-    color: rgb(255, 255, 255); /*Color de la palabra*/
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/*Tipografia de la letra.*/
-    float: right;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-weight: bold;
-    position: absolute;
-}
-
-
-.article h4 {
-    color: black;
-    background-color: #ffffff;
-}
-
-.Imagen img {
-    height: 15%;
-    width: 15%;
-    position: relative;
-    transform: translate(-10px,-50px);
-}
-
-.imgfondo img{
-    background-position: center;
-    height: 250px;
-    overflow: hidden;
-    width: 100%;
-    filter:blur(4px);
-    margin: 0;
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
     position: relative;
-    border: 0;
-    padding: 0;
-    bottom: 20px;
-    z-index: -50;
+    overflow: hidden;
+    padding: 0 20px;
+}
 
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    filter: brightness(0);
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 0;
+}
+header::before {
+    transition: filter 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('imagenes/Capturafondo.PNG');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.col-izquierda, .col-centro, .col-derecha {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.col-izquierda {
+    justify-content: flex-start;
+}
+.col-centro {
+    justify-content: center;
+}
+.col-derecha {
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo {
+    width: 130px; /* Ajustalo como te guste */
+    height: auto;
+}
+
+.menu{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px, 0px;
+    z-index: 3;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 100px;
+    justify-content: center;
+
+}
+.menu ul li{
+    display: inline-block;
+    margin: 0px, 40px;
+}
+.menu ul li a{
+color: rgb(255, 255, 255);
+text-decoration: none;
+font-weight: bold;
+font-size: 18px;
+padding: 10px, 15px;
+}
+
+.nombre{
+    z-index: 3;
 }
 
 .nombre article h1 { 
     font-family: Arial, Helvetica, sans-serif; 
     color: #EEEAE1; 
-    font-size: 6em; 
+    font-size: 5em; 
     text-align: center;
     position: center;
-    transform: translate(0px,-230px); 
-
 }
 
 .nombre article h5 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     color: #EEEAE1; 
-    font-size: 3em; 
+    font-size: 2.5em; 
     text-align: center;
     position: center;
-    transform: translate(0px,-230px); 
+}
+
+.numero{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.numero article h4 {
+    color: white;
+}   
+
+.contacto{
+    display:inline-block;
+    border:none;
+    background: none;
+    cursor:pointer;
+    margin: 0 15px;
+}
+.contacto img{
+width: 35px;
+height: 35px;
+transition: transform 0,2s ease;
+}
+.contacto img:hover{
+    transform:scale(1.1);
 }
 
 body{
@@ -119,7 +184,7 @@ padding-top: 50px;
     border-radius: 10px;
     padding: 10px;
 }
-.producto:hover{
+.producto img:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgb(13, 55, 19);
     background-color: f5f5dc;
@@ -154,32 +219,6 @@ padding-top: 50px;
     top: 4em;
 }
 
-.menu{
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 10px, 0px;
-}
-.menu ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 100px;
-    justify-content: center;
-
-}
-.menu ul li{
-    display: inline-block;
-    margin: 0px, 40px;
-}
-.menu ul li a{
-color: rgb(255, 255, 255);
-text-decoration: none;
-font-weight: bold;
-font-size: 18px;
-padding: 10px, 15px;
-}
-
 .customfooter{
 background-color: #3F5748;
 padding: 40px 0;
@@ -210,4 +249,3 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 margin-top: -15px;
 position: relative;
 }
-
