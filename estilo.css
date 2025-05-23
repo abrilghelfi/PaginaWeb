@@ -4,7 +4,36 @@
  padding: 0;
  border: 0;   
 }
-
+@font-face {
+  font-family: 'MiFuente';
+  src: url('./fuentes/Black\ Olives.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MiFuenteBEBAS';
+  src: url('./fuentes/Bebas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MiFuenteNEXA';
+  src: url('./fuentes/Nexa-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MiFuenteNEXAGRUESA';
+  src: url('./fuentes/Nexa-Heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MiFuenteAPPLE';
+  src: url('./fuentes/AppleGaramond-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 html, body{
     height: 100%;
 }
@@ -62,6 +91,7 @@ header::before {
     align-items: flex-end;
 }
 
+
 .logo {
     width: 130px; /* Ajustalo como te guste */
     height: auto;
@@ -99,17 +129,17 @@ padding: 10px, 15px;
 }
 
 .nombre article h1 { 
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'MiFuenteBEBAS', sans-serif;
     color: #EEEAE1; 
-    font-size: 5em; 
     text-align: center;
     position: center;
+    font-size: 5em;
 }
 
-.nombre article h5 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+.nombre article h2 {
+    font-family: 'MiFuente', sans-serif;
     color: #EEEAE1; 
-    font-size: 2.5em; 
+    font-size: 4em; 
     text-align: center;
     position: center;
 }
@@ -121,6 +151,7 @@ padding: 10px, 15px;
 
 .numero article h4 {
     color: white;
+    font-family: 'MiFuenteNEXA', sans-serif;
 }   
 
 .contacto{
@@ -173,6 +204,7 @@ padding-top: 50px;
 .producto h4{
     font-size: 1.1em;
     margin: 10px, 5px;
+    font-family: 'MiFuenteNEXAGRUESA', sans-serif;
 }
 
 .producto p{
@@ -190,7 +222,34 @@ padding-top: 50px;
     background-color: f5f5dc;
 }
 
+details {
+    margin-top: 10px;
+    background-color: #4E7A4B;
+    border-radius: 5px;
+    border-color: #000000;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-align: left;
+    font-family: 'MiFuenteAPPLE', sans-serif;
+}
 
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+details li {
+    list-style: disc;
+    margin-left: 10px;
+    font-family: 'MiFuenteAPPLE', sans-serif;
+    list-style-type: none;
+}
 .btncomprar{
     background-color: rgb(42, 67, 18);
     color: #EEEAE1;
