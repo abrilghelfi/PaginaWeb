@@ -1,34 +1,25 @@
-let carrito = [];
-let total = 0;
+<script>
+  function mostrarPlato() {
+    const checkboxes = document.querySelectorAll('#formulario input[type="checkbox"]');
+    const ingredientes = [];
 
-function agregarAlCarrito(nombre, precio) {
-  carrito.push({ nombre, precio });
-  total += precio;
-  actualizarCarrito();
-}
+    checkboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+        ingredientes.push(checkbox.value);
+      }
+    });
 
-function actualizarCarrito() {
-  const lista = document.getElementById('carrito-lista');
-  lista.innerHTML = '';
+    const resultadoDiv = document.getElementById("resultado");
 
-  carrito.forEach((item) => {
-    const li = document.createElement('li');
-    li.textContent = `${item.nombre} - $${item.precio}`;
-    lista.appendChild(li);
-  });
-
-  document.getElementById('total').textContent = total.toFixed(2);
-}
-
-function toggleMenu() {
-  const sidebar = document.getElementById('sidebar');
-  const content = document.getElementById('main-content');
-
-  if (sidebar.style.width === '250px') {
-    sidebar.style.width = '0';
-    content.style.marginLeft = '0';
-  } else {
-    sidebar.style.width = '250px';
-    content.style.marginLeft = '250px';
+    if (ingredientes.length > 0) {
+      resultadoDiv.innerHTML = `
+        <h3>🍽️ Tu plato ideal tiene:</h3>
+        <ul> {ingredientes.map(i => <li> {i}</li>).join('')}</ul>
+      `;
+      resultadoDiv.style.display = "block";
+    } else {
+      resultadoDiv.innerHTML = <p>❗No seleccionaste ningún ingrediente.</p>;
+      resultadoDiv.style.display = "block";
+    }
   }
-}
+</script>
