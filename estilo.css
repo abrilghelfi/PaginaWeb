@@ -70,6 +70,15 @@ header::before {
     z-index: 1;
 }
 
+.contenedor-columnas {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
 .col-izquierda, .col-centro, .col-derecha {
     flex: 1;
     display: flex;
@@ -124,8 +133,14 @@ font-size: 18px;
 padding: 10px, 15px;
 }
 
+.col-centro{
+    flex-direction: column;
+    align-items: center;
+}
+
 .nombre{
     z-index: 3;
+    align-items: center;
 }
 
 .nombre article h1 { 
@@ -434,7 +449,13 @@ position: relative;
 }
 
 /* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .nombre article h1 {
+        font-size: 4em;
+    }
+    .nombre article h2 {
+        font-size: 3em;
+    } 
   nav ul {
     
     flex-direction: row;
@@ -455,8 +476,27 @@ position: relative;
     padding: 10px;
   }
   .producto {
-    width: 33%;
+    width: 50%;
   }
+}
+
+@media (max-width: 580px) {
+    .nombre article h1 {
+        font-size: 3.5em;
+    }
+    .nombre article h2 {
+        font-size: 2.4em;
+    }
+    .logo {
+        width: 50%; /* Ajusta el tamaño del logo */
+    }
+    .col-derecha article h4{
+        font-size: 14px;
+    }
+    .contacto img{
+        width: 30%;
+        height: auto;
+    }
 }
 
 @media (max-width: 500px) {
@@ -466,6 +506,19 @@ position: relative;
     .menu ul li a{
         font-size: 12px;
     };
+}
+
+@media (max-width: 460px) {
+    .nombre article h1 {
+        font-size: 3em;
+    }
+    .nombre article h2 {
+        font-size: 2em;
+    }
+    .btncomprar {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
 }
 
 @media (max-width: 400px) {
@@ -504,5 +557,8 @@ position: relative;
     }
     .nombre article h2 {
         font-size: 2em;
+    }
+    .logo{
+        width: 50%;
     }
 }
